@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+ </head>
+ <body>
+    <h1>IRS 1099-MISC</h1>
+    <form method="POST" action="{{ url_for('generate') }}">
+    {{ form.csrf_token }}
+    <dl>
+        <h2>Year</h2>
+        <dt>{{ form.payment_year.label }}</dt>
+        <dd>{{ form.payment_year }}</dt>
+        <h2>Payer Information</h2>
+        <dt>{{ form.payers_name.label }}</dt>
+        <dd>{{ form.payers_name }}</dd>
+        <dt>{{ form.payers_address.label }}</dt>
+        <dd>{{ form.payers_address }}</dd>
+        <dt>{{ form.payers_city.label }}</dt>
+        <dd>{{ form.payers_city }}</dd>
+        <dt>{{ form.payers_state.label }}</dt>
+        <dd>{{ form.payers_state }}</dd>
+        <dt>{{ form.payers_zip.label }}</dt>
+        <dd>{{ form.payers_zip }}</dd>
+        <dt>{{ form.payers_fed_code.label }}</dt>
+        <dd>{{ form.payers_fed_code }}</dd>
+        <dt>{{ form.payers_tcc.label }}</dt>
+        <dd>{{ form.payers_tcc }}</dd>
+
+    </dl>
+    <dl>
+        <h2>Recipient Information</h2>
+        <dt>{{ form.recipient_given_name.label }}</dt>
+        <dd>{{ form.recipient_given_name }}</dd>
+        <dt>{{ form.recipient_family_name.label }}</dt>
+        <dd>{{ form.recipient_family_name }}</dd>
+        <dt>{{ form.recipient_address.label }}</dt>
+        <dd>{{ form.recipient_address }}</dd>
+        <dt>{{ form.recipient_tin.label }}</dt>
+        <dd>{{ form.recipient_tin_type }}
+            {{ form.recipient_tin }}</dd>
+
+    </dl>
+    <input type="submit" value="Generate"></input>
+    </form>
+
+ </body>
+</html>
