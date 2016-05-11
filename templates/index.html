@@ -10,9 +10,11 @@
     <form method="POST" action="{{ url_for('generate') }}">
     {{ form.csrf_token }}
     <dl>
-        <h2>Year</h2>
+        <h2>Year &amp; Amount</h2>
         <dt>{{ form.payment_year.label }}</dt>
-        <dd>{{ form.payment_year }}</dt>
+        <dd>{{ form.payment_year }}</dd>
+        <dt>{{ form.nonemployee_comp.label }}</dt>
+        <dd>{{ form.nonemployee_comp }}</dd>
         <h2>Payer Information</h2>
         <dt>{{ form.payers_name.label }}</dt>
         <dd>{{ form.payers_name }}</dd>
@@ -38,6 +40,12 @@
         <dd>{{ form.recipient_family_name }}</dd>
         <dt>{{ form.recipient_address.label }}</dt>
         <dd>{{ form.recipient_address }}</dd>
+        <dt>{{ form.recipient_city.label }}</dt>
+        <dd>{{ form.recipient_city }}</dd>
+        <dt>{{ form.recipient_state.label }}</dt>
+        <dd>{{ form.recipient_state }}</dd>
+        <dt>{{ form.recipient_zip.label }}</dt>
+        <dd>{{ form.recipient_zip }}</dd>
         <dt>{{ form.recipient_tin.label }}</dt>
         <dd>{{ form.recipient_tin_type }}
             {{ form.recipient_tin }}</dd>
