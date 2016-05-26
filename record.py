@@ -107,7 +107,7 @@ class FIREFile(object):
             self.form.payers_name.data[0:4].upper(),
             " ",
             "A ", # Type of Return A - 1099-MISC
-            "{0}7".format(self.form.nonemployee_comp.data).ljust(16), # Amount Codes
+            "7".ljust(16), # Amount Codes
             "".ljust(8),
             " ", # Foreign Entity Indicator
             self.form.payers_name.data.ljust(40), # First Payers Name
